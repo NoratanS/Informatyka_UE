@@ -1,7 +1,0 @@
-
-upython:S117"YRename this local variable "inputLog" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê“¾Òþÿÿÿÿ
-qpython:S117"URename this local variable "uMax" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÊÓ‰íùÿÿÿÿ
-qpython:S117"URename this local variable "uMin" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ë êšÿÿÿÿÿ
-vpython:S117"ZRename this local variable "userInput" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ò¼ÄÜûÿÿÿÿ
-dpython:S1542"LRename function "MinMax" to match the regular expression ^[a-z_][a-z0-9_]*$.(íÚ·—
-Qpython:S1135"4Complete the task associated to this "TODO" comment.(Ù‘áåúÿÿÿÿ
