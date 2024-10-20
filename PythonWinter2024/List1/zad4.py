@@ -12,19 +12,19 @@ Dodaj możliwość wybrania dowolnej liczby bazowej, aby program wyświetlał je
 potęgi do określonej wartości."""
 
 
-def Powers():
-    # Input
+def powers():
+    # Inputs
     n = int(input("Type a positive number (max): "))
     base = int(input("Type a positive number (base): "))
 
-    # Check input
+    # Check inputs
     if n < 0 or base < 0:
         print("Negative numbers are not allowed")
-        Powers()
+        powers()
 
     # initializing auxilary vars
-    i = 0
-    temp = base ** i
+    i = 0  # i stores the power index
+    temp = base ** i  # Temp stores the power result
 
     # printing and calculating the next power until we reach max limit
     while temp <= n:
@@ -32,4 +32,5 @@ def Powers():
         i += 1
         temp = base ** i
 
-Powers()
+
+powers()

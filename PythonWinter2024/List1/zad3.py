@@ -7,17 +7,23 @@ wszystkie liczby nieparzyste w zakresie między tymi liczbami."""
 
 
 def odds():
+    # Inputs
     left = int(input("Left: "))
     right = int(input("Right: "))
 
+    # Swap range ends if start is higher than the end
     if left > right:
         left, right = right, left
 
-    if left % 2 == 1:
-        for i in range(left, right + 1, 2):
+    # If we se start from an even number we have to increment it to make it odd
+    # If the range end is odd we need to increment it so that the last number is included
+    # If the range end is even its incrementation doesn't affect the result because of loop increment value (2)
+    # for example if right = 16 the last number printed would be 15 because next number to check would be 17
+    if left % 2 == 0:
+        for i in range(left + 1, right + 1, 2):
             print(i, end=" ")
     else:
-        for i in range(left + 1, right + 1, 2):
+        for i in range(left, right + 1, 2):
             print(i, end=" ")
 
 

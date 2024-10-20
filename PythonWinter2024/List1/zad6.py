@@ -11,29 +11,45 @@ Wynik programu:
 13 // suma min. i maks.
 6.5 // średnia"""
 
-# TODO można coś przyświrować
-def MinMax():
 
-    userInput = input("Type a number (type 0 to stop): ")
-    inputLog = "" + userInput
+def min_max():
+    u_input = input("Type a number (type 0 to stop): ")  # first input
+    u_number = int(u_input)  # user input as int
 
-    num = int(userInput)
-    uMin = num
-    uMax = num
+    if u_number == 0:
+        print("User input: 0")
 
-    while num != 0:
-        userInput = input("Type a number (type 0 to stop): ")
-        inputLog = inputLog + " " + userInput
-        num = int(userInput)
+    else:
+        input_log = "" + u_input + ", "  # all numbers that user types
+        u_min = u_number  # current min
+        u_max = u_number  # current max
 
-        if num < uMin:
-            uMin = num
-        elif num > uMax:
-            uMax = num
+        # main loop
+        while True:
+            u_input = input("Type a number (type 0 to stop): ")
+            u_num = int(u_input)
 
-    print(f" User input: {inputLog.split()}")
-    print(f" Min: {uMin}")
-    print(f" Max: {uMax}")
-    print(f" Average: {(uMin+uMax)/2}")
+            # stop if user types 0
+            if u_num == 0:
+                input_log += u_input
+                break
 
-MinMax()
+            input_log += u_input + ", "
+
+            # check if min or max changed
+            if u_num < u_min:
+                u_min = u_num
+            if u_num > u_max:
+                u_max = u_num
+
+        # printing results
+        print(f"User input: {input_log}")
+        print(f"Min: {u_min}")
+        print(f"Max: {u_max}")
+        print(f"Sum: {u_min+u_max}")
+        print(f"Average: {(u_max + u_min) / 2:.2f}")
+
+
+min_max()
+
+
